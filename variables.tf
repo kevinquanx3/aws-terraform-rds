@@ -212,7 +212,7 @@ variable "publicly_accessible" {
 variable "storage_encrypted" {
   description = "Specifies whether the DB instance is encrypted"
   type        = "string"
-  default     = false
+  default     = true
 }
 
 # Monitoring
