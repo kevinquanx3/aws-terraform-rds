@@ -92,7 +92,7 @@ locals {
 
   tags {
     Name            = "${var.name}"
-    ServiceProvider = "Rackspace"
+    ServiceProvider = "Sage"
     Environment     = "${var.environment}"
   }
 
