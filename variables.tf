@@ -182,7 +182,7 @@ variable "family" {
 variable "kms_key_id" {
   description = "KMS Key Arn to use for storage encryption. (OPTIONAL)"
   type        = "string"
-  default     = ""
+  default     = "arn:aws:kms:ca-central-1:785507394297:key/7e2a90f4-39fe-43a5-9724-b138ab1eca35"
 }
 
 variable "multi_az" {
