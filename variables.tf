@@ -259,8 +259,8 @@ variable "notification_topic" {
   default     = ""
 }
 
-variable "rackspace_alarms_enabled" {
-  description = "Specifies whether non-emergency rackspace alarms will create a ticket."
+variable "lsm_alarms_enabled" {
+  description = "Specifies whether non-emergency lsm alarms will create a ticket."
   type        = "string"
   default     = false
 }
@@ -333,8 +333,8 @@ variable "license_model" {
   type        = "string"
 }
 
-variable "rackspace_managed" {
-  description = "Boolean parameter controlling if instance will be fully managed by Rackspace support teams, created CloudWatch alarms that generate tickets, and utilize Rackspace managed SSM documents."
+variable "lsm_managed" {
+  description = "Boolean parameter controlling if instance will be fully managed by lsm support teams, created CloudWatch alarms that generate tickets, and utilize lsm managed SSM documents."
   type        = "string"
   default     = true
 }

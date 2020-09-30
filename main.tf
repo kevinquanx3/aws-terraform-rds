@@ -289,8 +289,8 @@ module "free_storage_space_alarm_ticket" {
   namespace                = "AWS/RDS"
   notification_topic       = ["${var.notification_topic}"]
   period                   = 60
-  rackspace_alarms_enabled = "${var.rackspace_alarms_enabled}"
-  rackspace_managed        = "${var.rackspace_managed}"
+  lsm_alarms_enabled = "${var.lsm_alarms_enabled}"
+  lsm_managed        = "${var.lsm_managed}"
   severity                 = "urgent"
   statistic                = "Average"
   threshold                = "${var.alarm_free_space_limit}"
@@ -312,8 +312,8 @@ module "replica_lag_alarm_ticket" {
   namespace                = "AWS/RDS"
   notification_topic       = ["${var.notification_topic}"]
   period                   = 60
-  rackspace_alarms_enabled = "${var.rackspace_alarms_enabled}"
-  rackspace_managed        = "${var.rackspace_managed}"
+  lsm_alarms_enabled       = "${var.lsm_alarms_enabled}"
+  lsm_managed              = "${var.lsm_managed}"
   severity                 = "urgent"
   statistic                = "Average"
   threshold                = 3600
@@ -335,7 +335,7 @@ module "free_storage_space_alarm_email" {
   namespace                = "AWS/RDS"
   notification_topic       = ["${var.notification_topic}"]
   period                   = 60
-  rackspace_alarms_enabled = false
+  lsm_alarms_enabled       = true
   statistic                = "Average"
   threshold                = 3072000000
 
@@ -356,7 +356,7 @@ module "write_iops_high_alarm_email" {
   namespace                = "AWS/RDS"
   notification_topic       = ["${var.notification_topic}"]
   period                   = 60
-  rackspace_alarms_enabled = false
+  lsm_alarms_enabled       = true
   statistic                = "Average"
   threshold                = "${var.alarm_write_iops_limit}"
 
@@ -377,7 +377,7 @@ module "read_iops_high_alarm_email" {
   namespace                = "AWS/RDS"
   notification_topic       = ["${var.notification_topic}"]
   period                   = 60
-  rackspace_alarms_enabled = false
+  lsm_alarms_enabled       = true
   statistic                = "Average"
   threshold                = "${var.alarm_read_iops_limit}"
 
@@ -398,7 +398,7 @@ module "cpu_high_alarm_email" {
   namespace                = "AWS/RDS"
   notification_topic       = ["${var.notification_topic}"]
   period                   = 60
-  rackspace_alarms_enabled = false
+  lsm_alarms_enabled       = true
   statistic                = "Average"
   threshold                = "${var.alarm_cpu_limit}"
 
@@ -420,7 +420,7 @@ module "replica_lag_alarm_email" {
   namespace                = "AWS/RDS"
   notification_topic       = ["${var.notification_topic}"]
   period                   = 60
-  rackspace_alarms_enabled = false
+  lsm_alarms_enabled       = true
   statistic                = "Average"
   threshold                = 3600
 
