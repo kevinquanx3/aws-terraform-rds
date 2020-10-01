@@ -226,7 +226,7 @@ variable "alarm_cpu_limit" {
 variable "alarm_free_space_limit" {
   description = "CloudWatch Free Storage Space Limit Threshold (Bytes)"
   type        = "string"
-  default     = 1024000000
+  default     = 10240000000
 }
 
 variable "alarm_read_iops_limit" {

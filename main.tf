@@ -337,7 +337,7 @@ module "free_storage_space_alarm_email" {
   period                   = 60
   lsm_alarms_enabled       = true
   statistic                = "Average"
-  threshold                = 3072000000
+  threshold                = 50072000000
 
   dimensions = [{
     DBInstanceIdentifier = "${aws_db_instance.db_instance.id}"
